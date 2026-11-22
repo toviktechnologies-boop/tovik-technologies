@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT GENERATION | Photography Studio</title>
+  <meta name="description" content="NEXT GENERATION Photography Studio - Capturing beautiful moments and unforgettable stories.">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #17233b;
+      background: #fff;
+    }
+
+    header {
+      height: 85px;
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 15px #00000008;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #087bff;
+    }
+
+    .logo span { color: #17233b; }
+
+    nav { display: flex; gap: 30px; }
+
+    nav a {
+      text-decoration: none;
+      color: #35445e;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: #087bff; }
+
+    .hero {
+      min-height: 590px;
+      padding: 100px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #edf6ff, #d9ecff);
+    }
+
+    .hero-content { max-width: 650px; }
+
+    .eyebrow {
+      color: #087bff;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.08;
+      margin-bottom: 25px;
+    }
+
+    h1 span { color: #087bff; }
+
+    .hero p {
+      max-width: 510px;
+      color: #586b85;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 28px;
+      background: #087bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 90px 8%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #718096;
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 9px;
+      transition: transform .3s;
+    }
+
+    .gallery img:hover { transform: translateY(-6px); }
+
+    .about {
+      background: #f4f8fd;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #65758d;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      padding: 35px 25px;
+      border: 1px solid #e5edf7;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    .service .number {
+      color: #087bff;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .service h3 { margin-bottom: 13px; }
+
+    .service p {
+      color: #718096;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .booking {
+      text-align: center;
+      background: #eaf4ff;
+    }
+
+    .booking h2 {
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+
+    .booking p {
+      color: #65758d;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 35px 8%;
+      text-align: center;
+      color: #dceaff;
+      background: #152b4a;
+      line-height: 2;
+    }
+
+    footer strong { color: white; }
+
+    @media (max-width: 800px) {
+      header { padding: 0 5%; }
+      nav { gap: 12px; }
+      nav a { font-size: 12px; }
+      .gallery, .services { grid-template-columns: 1fr 1fr; }
+      .about { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      header { height: auto; padding: 20px 5%; flex-direction: column; gap: 18px; }
+      nav { flex-wrap: wrap; justify-content: center; }
+      .hero { padding: 75px 6%; min-height: 480px; }
+      .section { padding: 65px 6%; }
+      .gallery, .services { grid-template-columns: 1fr; }
+      .gallery img { height: 260px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NEXT <span>GENERATION.</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">CREATIVITY THROUGH THE LENS</div>
+    <h1>Every picture<br>tells a <span>story.</span></h1>
+    <p>
+      We capture life's beautiful moments and turn them
+      into timeless memories. Discover photography with
+      creativity, passion and perfection.
+    </p>
+    <a href="#gallery" class="button">Explore Our Gallery →</a>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="section-heading">
+    <div class="eyebrow">OUR PORTFOLIO</div>
+    <h2>Moments Worth Remembering</h2>
+    <p>A collection of stories captured through our lens.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800" alt="Portrait photography">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="Wedding photography">
+    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Landscape photography">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Creative portrait">
+    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800" alt="Photography camera">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Travel photography">
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1000" alt="Professional photographer with camera">
+
+  <div>
+    <div class="eyebrow">ABOUT OUR STUDIO</div>
+    <h2>Photography Beyond Expectations.</h2>
+    <p>
+      NEXT GENERATION is a creative photography studio
+      concept built around storytelling, artistic vision
+      and beautiful memories.
+    </p>
+    <p>
+      From portraits and weddings to events and creative
+      projects, our goal is to make every moment special.
+    </p>
+    <a href="#contact" class="button">Let's Connect →</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-heading">
+    <div class="eyebrow">WHAT WE OFFER</div>
+    <h2>Our Photography Services</h2>
+    <p>Creative photography experiences for every occasion.</p>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <div class="number">01</div>
+      <h3>Portrait Photography</h3>
+      <p>Personal portraits that express your personality and style.</p>
+    </div>
+
+    <div class="service">
+      <div class="number">02</div>
+      <h3>Wedding Photography</h3>
+      <p>Beautiful memories of your most meaningful celebrations.</p>
+    </div>
+
+    <div class="service">
+      <div class="number">03</div>
+      <h3>Event Photography</h3>
+      <p>Special moments and unforgettable event experiences.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section booking" id="contact">
+  <div class="eyebrow">LET'S CREATE SOMETHING BEAUTIFUL</div>
+  <h2>Have a moment to capture?</h2>
+  <p>Get in touch with our studio to discuss your photography ideas.</p>
+  <a href="mailto:toviktechnogies@gmail.com?subject=Photography%20Studio%20Enquiry" class="button">
+    Contact Our Studio →
+  </a>
+</section>
+
+<footer>
+  <strong>NEXT GENERATION Photography Studio</strong>
+  <p>Capturing moments. Creating memories.</p>
+  <p>Website concept developed by TOVIK Technologies.</p>
+  <p>© 2026 NEXT GENERATION. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
