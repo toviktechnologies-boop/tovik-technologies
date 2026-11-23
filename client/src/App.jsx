@@ -5,7 +5,7 @@ import {
   LogOut, Mail, Phone, MapPin, Sparkles, ChevronRight
 } from "lucide-react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_URL || "https://tovik-technologies-server.vercel.app/api"
 
 const services = [
   { icon: Code2, number: "01", title: "Web Development", desc: "Fast, responsive websites that make your business look credible and turn visitors into customers.", tags: ["Business websites", "Landing pages", "SEO-ready builds"] },
